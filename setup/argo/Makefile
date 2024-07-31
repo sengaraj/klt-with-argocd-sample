@@ -1,6 +1,6 @@
 ARGO_NAMESPACE ?= argocd
 # renovate: datasource=github-tags depName=argoproj/argo-cd
-ARGO_VERSION ?= v2.6.0-rc2
+ARGO_VERSION ?= v2.10.16
 # renovate: datasource=github-tags depName=cert-manager/cert-manager
 ARGO_SECRET = $(shell kubectl -n ${ARGO_NAMESPACE} get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo)
 
